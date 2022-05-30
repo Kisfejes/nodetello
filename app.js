@@ -7,8 +7,8 @@
 const NodeTello = require('./lib/nodetello.js');
 const NodeTello_webclient = require('./lib/nodetello_webclient.js');
 
-//var webclient = new NodeTello_webclient('ffmpeg');	// in-browser video
-var webclient = new NodeTello_webclient('mplayer');	// open mplayer window with low latency video
+var webclient = new NodeTello_webclient('ffmpeg');	// in-browser video
+// var webclient = new NodeTello_webclient('mplayer');	// open mplayer window with low latency video
 	webclient.init();
 
 
@@ -19,7 +19,8 @@ var drone = new NodeTello();
 	drone.tello_telemetry_config = { 
 		px: "MVO.PX",
 		py: "MVO.PY",
-		pz: "MVO.PZ"
+		pz: "MVO.PZ",
+		state: "state"
 	};
 	drone.tello_telemetry_output = function (data) { webclient.telemetry_in(data); };
 	drone.init();

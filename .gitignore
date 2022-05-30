@@ -66,4 +66,5 @@ video.mp4
 video.base64.raw
 tests/
 video/*
+!video/.gitkeep
 test/
